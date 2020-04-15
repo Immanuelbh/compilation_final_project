@@ -1,0 +1,23 @@
+Students id:
+1. 309991644
+
+Student name:
+1. Immanuel Ben Hefer
+
+Operating system:
+Windows10 - 64Bit
+
+Development enviroment:
+Visual Studio 17
+
+Notes:
+1.  I added the ' _CRT_SECURE_NO_WARNINGS'  flag to the Preprocess Definitions through the projects property pages
+To replicate: 
+Left click on the project in Visual Studio ->
+Click on Properties ->
+Under 'Configuration Properties' click on 'C/C++' and click on 'Preprocessor' ->
+Click on the 'Preprocessor Definitions editbox, press on the small down-arrow and click on '<Edit...>' ->
+Now paste '_CRT_SECURE_NO_WARNINGS' in the first editbox ->
+Press OK and then OK again to save and return to the project.
+
+

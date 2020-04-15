@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -76,9 +76,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation;C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation\src;C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation\res;C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation;C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation\src;C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation\res;C:\Projects\VisualStudio17\compilation_final_project\Compilation\Compilation\inc;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -123,10 +126,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="test.c">
-      <SubType>
-      </SubType>
-    </ClCompile>
+    <ClCompile Include="src\Token.c" />
+    <ClCompile Include="src\win.lex.yy.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\..\temp\test1.txt" />
+    <Text Include="..\..\..\..\..\temp\test1_309991644_lex.txt" />
+    <Text Include="..\..\..\..\..\temp\test2.txt" />
+    <Text Include="..\..\..\..\..\temp\test2_309991644_lex.txt" />
+    <Text Include="res\information.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\assignment1.lex" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\Token.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
